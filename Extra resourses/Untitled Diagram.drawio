@@ -1,0 +1,61 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.0.3 Chrome/140.0.7339.249 Electron/38.7.0 Safari/537.36" version="29.0.3">
+  <diagram name="Page-1" id="APS8QbFZU_E9tWfwPHWa">
+    <mxGraphModel dx="772" dy="516" grid="1" gridSize="3" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" background="none" math="0" shadow="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-1" value="Bank User" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;outlineConnect=0;" vertex="1" parent="1">
+          <mxGeometry x="240" y="290" width="70" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-12" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xjTOBdqCImyGW6lBZv_-1" target="0xjTOBdqCImyGW6lBZv_-24">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="330" y="300" as="sourcePoint" />
+            <mxPoint x="496.20000000000005" y="191" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-13" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xjTOBdqCImyGW6lBZv_-1" target="0xjTOBdqCImyGW6lBZv_-25">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="330" as="sourcePoint" />
+            <mxPoint x="519.2" y="279" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xjTOBdqCImyGW6lBZv_-1" target="0xjTOBdqCImyGW6lBZv_-26">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="340" y="390" as="sourcePoint" />
+            <mxPoint x="519.2" y="359.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-16" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xjTOBdqCImyGW6lBZv_-1" target="0xjTOBdqCImyGW6lBZv_-27">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="360" y="430" as="sourcePoint" />
+            <mxPoint x="519.2" y="439.0000000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="0xjTOBdqCImyGW6lBZv_-1" target="0xjTOBdqCImyGW6lBZv_-28">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="350" y="490" as="sourcePoint" />
+            <mxPoint x="519.2" y="519" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-21" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shape=mxgraph.basic.smiley" vertex="1" parent="1">
+          <mxGeometry x="258" y="288" width="34" height="37" as="geometry" />
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-24" value="Manage&lt;div&gt;Customers&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="543" y="197.5" width="120" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-25" value="Manage&lt;div&gt;Accounts&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="543" y="263.5" width="120" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-26" value="Deposit&lt;div&gt;Money&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="543" y="329.5" width="120" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-27" value="WithDraw&lt;div&gt;Money&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="543" y="395.5" width="120" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="0xjTOBdqCImyGW6lBZv_-28" value="View&lt;div&gt;Transaction&lt;/div&gt;&lt;div&gt;History&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="543" y="458.5" width="120" height="54" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

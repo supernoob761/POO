@@ -714,8 +714,7 @@
                         </div>
                         <div class="card-body">
                             <p><i class="fas fa-envelope"></i> john.doe@example.com</p>
-                            <p><i class="fas fa-phone"></i> +1 234-567-8900</p>
-                            <p><i class="fas fa-calendar"></i> Member since Jan 2024</p>
+                            
                             <p><span class="badge">3 Accounts</span></p>
                         </div>
                     </div>
@@ -731,8 +730,7 @@
                         </div>
                         <div class="card-body">
                             <p><i class="fas fa-envelope"></i> jane.smith@example.com</p>
-                            <p><i class="fas fa-phone"></i> +1 234-567-8901</p>
-                            <p><i class="fas fa-calendar"></i> Member since Feb 2024</p>
+                            
                             <p><span class="badge">2 Accounts</span></p>
                         </div>
                     </div>
@@ -748,8 +746,7 @@
                         </div>
                         <div class="card-body">
                             <p><i class="fas fa-envelope"></i> mike.j@example.com</p>
-                            <p><i class="fas fa-phone"></i> +1 234-567-8902</p>
-                            <p><i class="fas fa-calendar"></i> Member since Mar 2024</p>
+                            
                             <p><span class="badge">1 Account</span></p>
                         </div>
                     </div>
