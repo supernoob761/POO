@@ -1,7 +1,7 @@
 <?php
 class Db
 {
-    private $instance = null;
+    private static $instance = null;
     private PDO $conn;
 
     private function __construct()
@@ -19,16 +19,15 @@ class Db
         }
     }
 
-    public static getinstance(){
+    public static function getInstance(){
         if(self::$instance === null){
-            self::$instance = new Db;
+            self::$instance = new Db();
         }
         return self::$instance;
     }
 
     public function connection(): PDO
     {
-        echo "connexion<br>";
         return $this->conn;
     }
 }

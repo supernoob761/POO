@@ -1,30 +1,21 @@
 <?php
 
 require_once 'database.php';
-require_once 'Client.php';
-require_once 'Accounts.php';
-require_once 'AccountRepository.php';
+// require_once 'Client.php';
+// require_once 'Accounts.php';
+// require_once 'AccountRepository.php';
 require_once 'CustomerRepository.php';
 
 
-try {
-    $db = new Db();
-    $pdo = $db->Connection();
+$repo = new CustomerRepository();
 
-    $repo1 = new CustomerRepository($pdo);
-    $customers = $repo1->getAll();
+$repo->Update("amina", "Grov@email.com",7);
 
-    foreach ($customers as $customer) {
-        $customer->displayInfo();
-    }
+$users = $repo->showAll();
+echo "<pre>";
+print_r($users);
+echo "</pre>";
 
-    $repo = new AccountRepository($pdo);
-    $accounts = $repo->getAll();
+// $repo->delete(8);
 
-    foreach ($accounts as $account) {
-        $account->displayInfo();
 
-}
-} catch (Exception $e) {
-    echo "Error: " . $e->getMessage();
-}
