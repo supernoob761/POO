@@ -1,6 +1,6 @@
 <?php
 
-class Accounts
+abstract class Accounts
 {
     private int $id;
     private float $balance;

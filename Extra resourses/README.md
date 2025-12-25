@@ -83,7 +83,26 @@ All data is persisted in a relational database and manipulated exclusively via P
 
 ### Transaction Management
 - US11: Make a deposit
-- US12: Make a withdrawal according to business rules
+As a user, I want to make a deposit into a bank account to increase its balance.
+
+**Business rules according to account type:**
+- **Checking Account**:
+
+- A fixed fee of $1 per deposit is applied
+- Amount actually credited = amount deposited − $1
+- **Savings Account**:
+
+- No fee applied
+- Amount credited = amount deposited
+---
+#### US12: Make a withdrawal
+As a user, I want to make a withdrawal according to the business rules of the account type.
+
+**Business Rules by Account Type:**
+
+- **Checking Account**: Withdrawals are allowed even if the balance becomes negative (overdraft limited to -$500)
+- **Savings Account**: Withdrawals are allowed only if the balance is sufficient (no overdraft)
+
 - US13: View the transaction history of an account
 
 ---
@@ -99,15 +118,16 @@ All data is persisted in a relational database and manipulated exclusively via P
 - Abstract Classes
 
 ### Architecture and Quality
-- Type hinting
-- Custom exceptions
-- CRUD via PDO with prepared statements
-- PDO transaction management
-- Separation of responsibilities: (Bonus)
+- Type Hinting
+- Custom Exceptions
+- CRUD via PDO with Prepared Statements
+- PDO Transaction Management
+- Separation of Responsibilities: (Bonus)
 
 - Entities
-- Repositories (data access)
-- Services (logic) (Business)
+- Repositories (Data Access)
+
+- Services (Business Logic)
 
 ### Standards (Bonus)
 - PSR-4 (autoloading)
