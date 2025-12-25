@@ -1,143 +1,141 @@
-# Application Bancaire Console en PHP OOP – PDO
+# Console Banking Application in PHP OOP – PDO
 
 ## Description
 
-Ce projet est une application bancaire en mode console développée en PHP, destinée à l’apprentissage de la Programmation Orientée Objet (POO) et de la manipulation des bases de données avec PDO.
+This project is a console-based banking application developed in PHP, designed for learning Object-Oriented Programming (OOP) and database manipulation with PDO.
 
-L’application permet de gérer des clients, des comptes bancaires et des transactions de manière structurée, sécurisée et conforme aux bonnes pratiques du développement back-end.
+The application allows for the structured and secure management of clients, bank accounts, and transactions, adhering to best practices in back-end development.
 
-Le projet met l’accent sur l’architecture logicielle, la séparation des responsabilités, la persistance des données et la modélisation UML.
-
----
-
-## Contexte du projet
-
-Vous êtes développeur back-end au sein d’une entreprise spécialisée dans les solutions digitales financières.
-
-Votre mission consiste à concevoir et développer une application bancaire en mode console destinée à un établissement financier.
-
-Cette application permet de gérer les clients, les comptes bancaires et les transactions de manière fiable et maintenable, tout en respectant les standards professionnels du développement back-end.
+The project emphasizes software architecture, separation of responsibilities, data persistence, and UML modeling.
 
 ---
 
-## Objectifs pédagogiques
+## Project Context
 
-- Maîtriser la programmation orientée objet en PHP
-- Concevoir une architecture claire et maintenable
-- Manipuler une base de données relationnelle avec PDO
-- Implémenter un CRUD complet et sécurisé
-- Gérer la logique métier bancaire
-- Respecter les normes PSR-4 et PSR-12
-- Comprendre et appliquer la modélisation UML
+You are a back-end developer at a company specializing in digital financial solutions.
+
+Your mission is to design and develop a console-based banking application for a financial institution.
+
+This application allows for the reliable and maintainable management of clients, bank accounts, and transactions, while respecting professional back-end development standards.
 
 ---
 
-## Entités métier
+## Learning Objectives
 
-- Client
-- Compte (classe abstraite)
-  - CompteCourant
-  - CompteEpargne
+- Master object-oriented programming in PHP
+- Design a clear and maintainable architecture
+- Manipulate a relational database with PDO
+- Implement a complete and secure CRUD operation
+- Manage banking business logic
+- Comply with PSR-4 and PSR-12 standards
+- Understand and apply UML modeling
+
+---
+
+## Business Entities
+
+- Customer
+- Account (abstract class)
+- Current Account
+- Savings Account
 - Transaction
 
-Toutes les données sont persistées dans une base de données relationnelle et manipulées exclusivement via PDO avec des requêtes préparées.
+All data is persisted in a relational database and manipulated exclusively via PDO using prepared statements.
 
 ---
 
-## Fonctionnalités
+## Features
 
-### Gestion des clients
-- Création, modification et suppression de clients
-- Consultation de la liste des clients
-- Vérification de l’unicité de l’email
+### Customer Management
+- Create, modify, and delete customers
+- View customer list
+- Verify email uniqueness
 
-### Gestion des comptes
-- Création de comptes bancaires
-- Association d’un compte à un client
-- Gestion de plusieurs types de comptes via l’héritage
-- Suppression d’un compte uniquement si le solde est nul
+### Account Management
+- Create bank accounts
+- Associate an account with a customer
+- Manage multiple account types via inheritance
+- Delete an account only if the balance is zero
 
-### Gestion des transactions
-- Dépôt sur un compte bancaire
-- Retrait avec règles métier selon le type de compte
-- Consultation de l’historique des transactions
-- Utilisation des transactions PDO (commit / rollback)
+### Transaction Management
+- Deposit to a bank account
+- Withdrawal with business rules based on account type
+- View transaction history
+- Use PDO transactions (commit/rollback)
 
 ---
 
 ## User Stories (Scrum)
 
-### Gestion des clients
-- US01 : Créer un client
-- US02 : Consulter la liste des clients
-- US03 : Consulter les détails d’un client
-- US04 : Modifier un client
-- US05 : Supprimer un client sans compte bancaire
+### Customer Management
+- US01: Create a customer
+- US02: View customer list
+- US03: View customer details
+- US04: Modify a customer
+- US05: Delete a customer without a bank account
 
-### Gestion des comptes
-- US06 : Créer un compte bancaire pour un client
-- US07 : Choisir le type de compte
-- US08 : Consulter tous les comptes
-- US09 : Consulter les comptes d’un client
-- US10 : Supprimer un compte bancaire avec solde nul
+### Account Management
+- US06 : Create a bank account for a client
+- US07: Choose the account type
+- US08: View all accounts
+- US09: View a client's accounts
+- US10: Delete a bank account with a zero balance
 
-### Gestion des transactions
-- US11 : Effectuer un dépôt
-- US12 : Effectuer un retrait selon les règles métier
-- US13 : Consulter l’historique des transactions d’un compte
+### Transaction Management
+- US11: Make a deposit
+- US12: Make a withdrawal according to business rules
+- US13: View the transaction history of an account
 
 ---
 
-## Contraintes techniques
+## Technical Constraints
 
-### Programmation orientée objet
-- Classes et objets
-- Constructeurs
+### Object-Oriented Programming
+- Classes and Objects
+- Constructors
 - Encapsulation (private, protected)
-- Getters et setters avec validation
-- Héritage et polymorphisme
-- Classes abstraites
+- Getters and Setters with Validation
+- Inheritance and Polymorphism
+- Abstract Classes
 
-### Architecture et qualité
+### Architecture and Quality
 - Type hinting
-- Exceptions personnalisées
-- CRUD via PDO avec requêtes préparées
-- Gestion des transactions PDO
-- Séparation des responsabilités : (Bonus)
-  - Entités
-  - Repositories (accès aux données)
-  - Services (logique métier)
+- Custom exceptions
+- CRUD via PDO with prepared statements
+- PDO transaction management
+- Separation of responsibilities: (Bonus)
 
-### Normes (Bonus)
+- Entities
+- Repositories (data access)
+- Services (logic) (Business)
+
+### Standards (Bonus)
 - PSR-4 (autoloading)
-- PSR-12 (style de code)
+- PSR-12 (code style)
 
 ---
 
-## UML – Modélisation obligatoire
+## UML – Mandatory Modeling
 
-### Diagramme de classes
-Le diagramme doit représenter :
-- Client
-- Compte (abstraite)
-- CompteCourant
-- CompteEpargne
+### Class Diagram
+The diagram must represent:
+- Customer
+- Account (abstract)
+- Current Account
+- Savings Account
 - Transaction
 
-Relations attendues :
-- Un client possède plusieurs comptes
-- Un compte possède plusieurs transactions
-- Héritage entre Compte et ses sous-classes
+Expected Relationships:
+- A customer has multiple accounts
+- An account has multiple transactions
+- Inheritance between Account and its subclasses
 
-### Diagramme de cas d’utilisation
-Acteur principal : Utilisateur bancaire
+### Use Case Diagram
+Main Actor: Bank User
 
-Cas d’utilisation :
-- Gérer les clients
-- Gérer les comptes
-- Effectuer un dépôt
-- Effectuer un retrait
-- Consulter l’historique des transactions
-
-
-
+Use Cases:
+- Manage customers
+- Manage accounts
+- Make a deposit
+- Make a withdrawal
+- View transaction history
