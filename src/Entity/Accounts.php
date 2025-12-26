@@ -2,9 +2,9 @@
 
 abstract class Accounts
 {
-    private int $id;
-    private float $balance;
-    private int $customerId;
+    protected int $id;
+    protected float $balance;
+    protected int $customerId;
 
     public function __construct(int $id, float $balance, int $customerId)
     {
@@ -18,20 +18,16 @@ abstract class Accounts
         return $this->id;
     }
 
-    public function getBalance(): float
-    {
-        return $this->balance;
-    }
-
     public function getCustomerId(): int
     {
         return $this->customerId;
     }
 
-    public function displayInfo(): void
+    public function getBalance(): float
     {
-        echo "Account ID: {$this->id} | ";
-        echo "Balance: {$this->balance} | ";
-        echo "Customer ID: {$this->customerId}<br>";
+        return $this->balance;
     }
+
+    abstract public function deposit(float $amount): void;
+    abstract public function withdraw(float $amount): bool;
 }

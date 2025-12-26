@@ -1,9 +1,19 @@
 <?php
 class savingsAccount extends Accounts{
 
-    public function abletowithdraw(float $money):bool
+     public function deposit(float $amount): void
     {
-        return $this->balance >= $money;
+        $this->balance += $amount;
+    }
+
+    public function withdraw(float $amount): bool
+    {
+        if ($amount > $this->balance) {
+            return false;
+        }
+
+        $this->balance -= $amount;
+        return true;
     }
 }
 

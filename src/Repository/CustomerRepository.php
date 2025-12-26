@@ -8,7 +8,7 @@ public function __construct(){
 }
 
 public function showAll(){
-    $stmt = $this->pdo->query("SELECT name, email FROM customers");
+    $stmt = $this->pdo->query("SELECT id, name, email FROM customers");
     return $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 
@@ -40,6 +40,13 @@ public function Delete(int $id){
 $stmt = $this->pdo->prepare("DELETE FROM customers WHERE id = :id");
 return $stmt->execute(['id' => $id]);
 }
+public function findClient(string $name)
+    { echo "start";
+        $stmt = $this->pdo->prepare("SELECT * FROM customers WHERE name = :name");
+        $stmt->execute(['name' => $name]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+        echo "finished";
+    }
 }
 
 

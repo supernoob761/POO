@@ -1,9 +1,10 @@
 <?php
 class Db
 {
+    private static $instance = null;
     private PDO $conn;
 
-    public function __construct()
+    private function __construct()
     {
         $servername = "localhost";
         $username = "root";
@@ -18,8 +19,16 @@ class Db
         }
     }
 
+    public static function getInstance(){
+        if(self::$instance === null){
+            self::$instance = new Db();
+        }
+        return self::$instance;
+    }
+
     public function connection(): PDO
     {
         return $this->conn;
     }
 }
+?>
